@@ -2,11 +2,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 left-container">
-            <ul class="list-group list-group-flush">
-                <% @foods.each do |food| %>
-                    <li class="list-group-item">Name: <%= food.dish %> ingredients: <%= food.ingredient %> Price: <%= food.price %></li>
-                <% end %>
-            </ul>
-        </div>
+        <% @foods.each do |food| %>
+
+            <div class="list-group">
+                <div class="d-flex w-100 justify-content-between list-group-item">
+                    <h5 class="mb-1">Name: <%= food.dish %></h5>
+                    <p class="mb-1">Ingregients: <%= food.ingredient %></p>
+                    <p class="mb-1">Spices: <%= food.spice %></p>
+                    <small>Price: <%= number_to_currency food.price %></small>
+                </div>
+            </div>
+        <% end %>
     </div>
  </div>
