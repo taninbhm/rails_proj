@@ -1,0 +1,12 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 left-container">
+            <ul class="list-group list-group-flush">
+                <% @foods.each do |food| %>
+                    <li class="list-group-item">Name: <%= food.dish %> ingredients: <%= food.ingredient %> Price: <%= food.price %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+ </div>
