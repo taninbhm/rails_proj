@@ -1,0 +1,17 @@
+<h1>Restaurants</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 left-container">
+            <% @restaurants.each do |restaurant| %>
+                    <div class="panel panel-primary">
+                        <h5 class="panel-heading">Name: <%= restaurant.name %></h5>
+                        <div class="panel-body">
+                            <p class="mb-1">Address: <%= restaurant.address %></p>
+                        </div>
+                    </div>
+            <% end %>
+        </div>
+
+        <div class="col-md-4 right-container">
+                    Coming soon
+        </div>

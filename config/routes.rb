@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+
   resources :foods, only: [:index, :show]
+  resources :restaurants, only: [:index, :show]
   resources :search
   get '/about' => 'pages#about'
   get '/home' => 'pages#home'
-  get '/restaurants' => 'pages#restaurants'
 
   get 'foods/:id', to: 'foods#show', as: 'selected_food'
   get 'search_results', to: 'search#results', as: 'search_results'
