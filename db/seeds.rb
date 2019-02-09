@@ -7,14 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Food.destroy_all
-
+Restaurant.destroy_all
 10.times do
-    Food.create(
-        dish:Faker::Food.unique.dish,
-        ingredient:Faker::Food.ingredient,
-        spice:Faker::Food.spice,
-        price:Faker::Commerce.price(range = 10..40.0, as_string = false)
-    )
-end
+    restaurant = Restaurant.create(name: Faker::Company.unique.name,
+                                address: Faker::Address.street_address)
 
-puts "beers in database #{Food.count}"
+    restaurant.foods.create(dish: Faker::Food.unique.dish,
+                            ingredient: Faker::Food.ingredient,
+                            spice: Faker::Food.spice,
+                            price: Faker::Number.decimal(2)
+                            )
+end
+puts "Restaurants in database #{Restaurant.count}"
+puts "Foods in database #{Food.count}"
