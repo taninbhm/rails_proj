@@ -1,7 +1,6 @@
 class SearchController < ApplicationController
-    def index
-    end
-
     def results
+        @query = params[:q]
+        @foods = Food.where('dish LIKE ?', "%#{@query}%")
     end
 end
