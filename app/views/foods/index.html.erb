@@ -1,17 +1,16 @@
-
+<h1>Foods</h1>
 <div class="container">
     <div class="row">
         <div class="col-md-8 left-container">
             <% @foods.each do |food| %>
-
-                <div class="list-group">
-                    <div class="d-flex w-100 justify-content-between list-group-item">
-                        <h5 class="mb-1">Name: <%= food.dish %></h5>
-                        <p class="mb-1">Ingregients: <%= food.ingredient %></p>
-                        <p class="mb-1">Spices: <%= food.spice %></p>
-                        <small>Price: <%= number_to_currency food.price %></small>
+                    <div class="panel panel-primary">
+                        <h5 class="panel-heading">Name: <%= food.dish %></h5>
+                        <div class="panel-body">
+                            <p class="mb-1">Ingregients: <%= food.ingredient %></p>
+                            <p class="mb-1">Spices: <%= food.spice %></p>
+                            <small>Price: <%= number_to_currency food.price %></small>
+                        </div>
                     </div>
-                </div>
             <% end %>
         </div>
 

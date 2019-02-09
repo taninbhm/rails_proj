@@ -23,7 +23,8 @@
           <%= link_to 'Midterm Project', root_path, class: 'navbar-brand' %>
 
           <div class="collapse navbar-collapse" id="main-nav-collapse">
-            <ul class="nav navbar-nav navbar-left">
+            <ul class="nav nav-tabs navbar-left ">
+            <li><%= link_to "Home", home_path %></li>
               <li><%= link_to "About", about_path %></li>
               <li><%= link_to "Foods", foods_path %></li>
             </ul>
@@ -31,7 +32,7 @@
       </div>
 
       <div class="col-md-4">
-      <div class="input-group">
+      <div class="input-group search">
         <%= form_tag(search_results_path, method: "get")  do %>
             <%= label_tag(:q, "Search for:") %>
             <%= text_field_tag(:q) %>
