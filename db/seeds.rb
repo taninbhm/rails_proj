@@ -15,7 +15,7 @@ Restaurant.destroy_all
     restaurant.foods.create(dish: Faker::Food.unique.dish,
                             ingredient: Faker::Food.ingredient,
                             spice: Faker::Food.spice,
-                            price: Faker::Number.decimal(2)
+                            price: Faker::Commerce.price(range= 10..50.0, as_string = false)
                             )
 end
 puts "Restaurants in database #{Restaurant.count}"
