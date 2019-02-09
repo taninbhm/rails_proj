@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :search
   get '/about' => 'pages#about'
   get '/home' => 'pages#home'
-
+  get '/restaurants' => 'pages#restaurants'
 
   get 'foods/:id', to: 'foods#show', as: 'selected_food'
   get 'search_results', to: 'search#results', as: 'search_results'
