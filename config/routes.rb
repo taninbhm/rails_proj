@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pages
   resources :foods, only: [:index, :show]
   resources :restaurants, only: [:index, :show]
   resources :search

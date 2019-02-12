@@ -9,7 +9,7 @@
                 <h4>ingredient: <%= @food.ingredient %></h4>
                 <h4>Spices: <%= @food.spice %></h4>
                 <h5 style="font-weight: bold">Restaurant: <%= @food.restaurant.name %></h5>
-                <small>Price: <%= @food.price %></small>
+                <small>Price: <%= number_to_currency @food.price %></small>
                 <p> <%= link_to 'back', root_path %></p>
             </div>
         </div>
