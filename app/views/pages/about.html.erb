@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="left-container">
+        <div class="panel panel-primary">
+            <h3 class="panel-heading">About My Rails Project</h3>
+            <div class="panel-body">
+                <p>In this project I'm using two different data sets, both coming from the <b>Faker Gem Library</b>.
+                The first Dataset is makes Food database, along with their name, ingredients, spices, and price.
+                The second Dataset creates Restaurant database along with their name, and address.
+                </p>
+                <div class="alert alert-secondary" role="alert"> These two models have <span class="alert-link">1-many relationship</span>, meaning a food belongs to a restaurant, and a restaurant has many foods.
+                In the Foods table there is a foreign-key to the Restaurant Table, matching with the Restaurant id.
+                </div>
+                <p> The menu contains a link to Home page, which lists the name of all the foods, and restaurants in the database, as well as a link for each item, to show more details
+                such as <b> the restaurant associated with each food item</b>. It Also includes, a link to the Foods Category and Restaurant Category with their description.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

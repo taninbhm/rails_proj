@@ -10,3 +10,19 @@
         </div>
         </div>
         </div>
+
+        <div class="container">
+    <div class="row">
+        <div class="col-md-8 left-container">
+            <% @restaurants.each do |restaurant| %>
+
+                <div class="list-group">
+                <div class="d-flex w-100 justify-content-between list-group-item">
+                    <h5 class="mb-1">Name: <%= restaurant.name %></h5>
+                    <p class="mb-1">Address: <%= restaurant.address %></p>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        </div>
+        </div>
