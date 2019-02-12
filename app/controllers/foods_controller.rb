@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
     def index
-        @foods = Food.order(:price)
+        @foods = Food.includes(:restaurant).order(:price)
         @foods = Food.all
     end
     def show
