@@ -53,6 +53,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem 'will_paginate', '~> 3.1.1'
+  gem 'will_paginate-bootstrap'
 end
 
 group :test do
